@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Space Colony One</title>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <style>
+body {
+  margin: 0px;
+  background-color: black;
+}
+.white {
+  background: white;
+  color: black;
+}
+.viewgroup {
+  padding: 0 15px 15px 15px;
+}
+.viewsection {
+  padding-top: 15px;
+}
+h2 {
+  font-family: 'Audiowide', cursive;
+  font-size: 1.2em;
+  margin-top: 0px;
+}
+a:link {
+    text-decoration: none;
+}
+a:visited {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+a:active {
+    text-decoration: underline;
+}
+#heading {
+  width: 100%;
+  height: 191px;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+}
+#heading-banner-0 {
+   -webkit-flex: 10 0 0; 
+   flex: 10 0 0; 
+  height: 100%;
+  background: url("heading-banner-0.jpg") repeat-x;
+}
+#heading-banner-1 {
+   -webkit-flex: 1 0 0; 
+   flex: 1 0 0; 
+  width: 374;
+  height: 100%;
+  background: url("heading-banner-1.jpg");
+}
+.toptitle {
+  margin-top: 20px;
+  text-align: center;
+  font-family: 'Audiowide', cursive;
+  font-size: 36px;
+  font-weight: 900;
+  color: white;
+}
+.subtitle {
+  margin-top: 10px;
+  text-align: center;
+  font-family: 'Audiowide', cursive;
+  font-size: 36px;
+  font-weight: 900;
+  color: black;
+}
+.details {
+  padding-right: 40px;
+  background-image: url('chevron-arrow-right.jpg');
+  background-repeat: no-repeat;
+  background-position: right center;
+  cursor: pointer;
+}
+    </style>
+</head>
+
+<body>
+
+    <div id="heading">
+      <div id="heading-banner-0">
+        <div class="toptitle">SPACE COLONY ONE</div>
+        <div class="subtitle">OPENS 20.02.2020</div>
+      </div>
+      <div id="heading-banner-1"></div>
+    </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="panel" style="width: 100%; height: 135px; border: none; padding: 0px; background: url('panorama.jpg')"></div>
+      </div>
+      <div class="col-sm-12">
+        <div class="white panel viewgroup viewsection">
+          <p>
+            Experience the life of a pioneer in a space colony of the XXI century through a 3-day adventure packed with high-tech space science, intense missions and mind-expanding experiences.
+          </p>
+          <button type="button" class="btn btn-link" data-toggle="modal" data-target="#newsletter" onClick="ga('send', 'event', 'Overview', 'subscribe');" style="padding-top: 0px; padding-left: 0px;">Read more</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-8">
+
+        <div class="panel">
+          <div class="row viewgroup">
+            <div class="col-sm-3 viewsection">
+              <img src="space-elevator.jpg" style="width: 100%" />
+            </div>
+            <div class="col-sm-9 viewsection">
+              <h2>Attractions</h2>
+              <p class="details" data-toggle="modal" data-target="#newsletter" onClick="ga('send', 'event', 'Attractions', 'subscribe');">
+                Ride a space elevator, sleep in a colony base, eat space food, walk a crater in a space suit, talk to your family million miles away back home and do much more!
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="row viewgroup">
+            <div class="col-sm-3 viewsection">
+              <img src="farms.jpg" style="width: 100%" />
+            </div>
+            <div class="col-sm-9 viewsection">
+              <h2>Science</h2>
+              <p class="details" data-toggle="modal" data-target="#newsletter" onClick="ga('send', 'event', 'Science', 'subscribe');">
+               Learn more about the science behind space exploration and colonization. Track the progress of new technology enabling the human race to expand into the Solar system and the universe.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="row viewgroup">
+            <div class="col-sm-3 viewsection">
+              <img src="teddies.jpg" style="width: 100%" />
+            </div>
+            <div class="col-sm-9 viewsection">
+              <h2>Community</h2>
+              <p>
+               Join the generation that builds the first space colony!
+              </p>
+              <button type="button" class="btn btn-link" data-toggle="modal" data-target="#newsletter" onClick="ga('send', 'event', 'Community', 'subscribe');" style="padding-top: 0px; padding-left: 0px;">Subscribe to our newsletter</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="col-sm-4">
+        <div class="white panel viewgroup viewsection">
+          <h2>Early Bird Tickets</h2>
+          <p>
+             Subscribe to our monthly newsletter and watch out for the secret discounts!
+          </p>
+
+          <form action="//bitballoon.us14.list-manage.com/subscribe/post?u=cfeb727e3daa36e6ae7017585&amp;id=07003cb284" method="post" class="validate" target="_blank" novalidate>
+            <div class="form-group">
+              <input type="email" value="" name="EMAIL" class="form-control" placeholder="Enter your e-mail address" required>
+              <input type="hidden" name="b_cfeb727e3daa36e6ae7017585_07003cb284" tabindex="-1" value="">
+            </div>
+            <input type="submit" value="Subscribe" name="subscribe" class="btn btn-default">
+          </form>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="panel" style="background-color: black; color: white">
+          <p>
+            All rights reserved, 2016. <button type="button" class="btn btn-link" data-toggle="modal" data-target="#newsletter" onClick="ga('send', 'event', 'Contact', 'contact');" style="padding-top: 0px; padding-left: 0px;">Contact us</button>
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="modal fade" id="newsletter" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Available to subscribers only</h4>
+        </div>
+        <div class="modal-body">
+          <p>Subscribe to our newsletter to read more</p>
+          <form action="//bitballoon.us14.list-manage.com/subscribe/post?u=cfeb727e3daa36e6ae7017585&amp;id=07003cb284" method="post" class="validate" target="_blank" novalidate>
+            <div class="form-group">
+              <input type="email" value="" name="EMAIL" class="form-control" placeholder="Enter your e-mail address" required>
+              <input type="hidden" name="b_cfeb727e3daa36e6ae7017585_07003cb284" tabindex="-1" value="">
+            </div>
+            <input type="submit" value="Subscribe" name="subscribe" class="btn btn-default">
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

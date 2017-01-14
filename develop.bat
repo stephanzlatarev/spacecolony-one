@@ -1,0 +1,1 @@
+start chrome --allow-file-access-from-files --disable-web-security --incognito "./src/main/webapps/scene.html"
