@@ -42,19 +42,19 @@ h2 {
 }
 
 a:link {
-  color: #333;
+  color: LightSteelBlue;
   text-decoration: none;
 }
 a:visited {
-  color: #333;
+  color: LightSteelBlue;
   text-decoration: none;
 }
 a:hover {
-  color: white;
+  color: SteelBlue;
   text-decoration: underline;
 }
 a:active {
-  color: white;
+  color: SteelBlue;
   text-decoration: underline;
 }
 
