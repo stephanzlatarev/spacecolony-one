@@ -6,7 +6,6 @@ body {
 
 #heading {
   width: 100%;
-  height: 70px;
   display: -webkit-flex;
   display: flex;
   -webkit-flex-direction: row;
@@ -29,10 +28,26 @@ body {
   margin-top: 0px;
   text-align: center;
   font-family: 'Audiowide', cursive;
-  font-size: 36px;
   font-weight: 900;
   color: white;
   mix-blend-mode: difference;
+}
+
+@media (min-width:500px) {
+  #heading {
+    height: 70px;
+  }
+  #heading-title {
+    font-size: 36px;
+  }
+}
+@media (max-width:499px){
+  #heading {
+    height: 36px;
+  }
+  #heading-title {
+    font-size: 20px;
+  }
 }
 
 h2 {
