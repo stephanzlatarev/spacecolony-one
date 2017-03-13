@@ -5,7 +5,7 @@ import {Panel} from 'react-bootstrap';
 export default class ScienceCard extends React.Component {
 
   onClick() {
-    window.spacecolony.navigateTo('topic');
+    window.spacecolony.navigateTo('Topic');
   }
 
   render() {

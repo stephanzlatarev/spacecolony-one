@@ -80,3 +80,10 @@ a:active {
   background-position: right center;
   cursor: pointer;
 }
+
+.navpath {
+  margin-right: 5px;
+  font-family: 'Audiowide', cursive;
+  font-size: 1.0em;
+  cursor: pointer;
+}

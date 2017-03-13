@@ -22,13 +22,13 @@ export default class MainPage extends React.Component {
         {
           icon: 'space-elevator.jpg',
           title: 'Blueprints',
-          navigation: 'projects',
+          navigation: 'Blueprints',
           text: 'Join the generation that builds the first space colony!'
         },
         {
           icon: 'farms.jpg',
           title: 'Science',
-          navigation: 'science',
+          navigation: 'Science',
           text: 'Learn more about the science behind space expl'
             + 'oration and colonization. Track the progress of '
             + 'new technology enabling the human race to expand'
@@ -37,7 +37,7 @@ export default class MainPage extends React.Component {
         {
           icon: 'teddies.jpg',
           title: 'Experience',
-          navigation: 'experience',
+          navigation: 'Experience',
           text: 'Experience the life of a pioneer in a space co'
             + 'lony of the XXI century through a 3-day adventur'
             + 'e packed with high-tech space science, intense m'
