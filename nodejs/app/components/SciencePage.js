@@ -40,7 +40,7 @@ export default class SciencePage extends React.Component {
     });
 
     return (
-      <div className="container">
+      <div>
         { cards }
       </div>
     );

@@ -35,7 +35,7 @@ export default class ProjectsPage extends React.Component {
     });
 
     return (
-      <div className="container">
+      <div>
         { cards }
       </div>
     );

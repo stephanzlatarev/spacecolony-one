@@ -75,7 +75,7 @@ export default class MainPage extends React.Component {
     };
 
     return (
-      <div className="container">
+      <div>
         <Row>
           <Col xs={ 12 }>
             <div className="panel" style={ headlinestyle }></div>
