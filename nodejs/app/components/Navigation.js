@@ -2,11 +2,7 @@ import React from 'react';
 
 import {Panel} from 'react-bootstrap';
 
-import MainPage from './MainPage.js';
-import ExperiencePage from './ExperiencePage.js';
-import ProjectsPage from './ProjectsPage.js';
-import SciencePage from './SciencePage.js';
-import TopicPage from './TopicPage.js';
+import NavigationPage from './NavigationPage.js';
 
 export default class Navigation extends React.Component {
 
@@ -14,12 +10,14 @@ export default class Navigation extends React.Component {
     super(props);
 
     this.state = {
-      path: [ 'Home' ]
+      path: []
     };
 
     window.spacecolony = {
       navigateTo: this.navigateTo.bind(this)
     };
+
+    this.navigateTo('Home');
   }
 
   selection() {
@@ -32,6 +30,7 @@ export default class Navigation extends React.Component {
       let path = this.state.path;
 
       this.state.path = [];
+      this.state.data = null;
 
       for (let part in path) {
         if (path[part] === page) {
@@ -42,9 +41,20 @@ export default class Navigation extends React.Component {
       }
 
       this.state.path.push(page);
-
       this.setState(this.state);
+
+      this.downloadContent(page);
     }
+  }
+
+  downloadContent(page) {
+    window.$.getJSON('/content/' + page, function(data) {
+      // this if avoids jumping between pages when one download is slower than others
+      if (this.selection() === page) {
+        this.state.data = data;
+        this.setState(this.state);
+      }
+    }.bind(this));
   }
 
   render() {
@@ -72,24 +82,10 @@ export default class Navigation extends React.Component {
       );
     }
 
-    let page;
-    let selection = this.selection();
-    if (selection === 'Experience') {
-      page = (<ExperiencePage />);
-    } else if (selection === 'Blueprints') {
-      page = (<ProjectsPage />);
-    } else if (selection === 'Science') {
-      page = (<SciencePage />);
-    } else if (selection === 'Topic') {
-      page = (<TopicPage />);
-    } else {
-      page = (<MainPage />);
-    }
-
     return (
       <div>
         { path }
-        { page }
+        <NavigationPage data={ this.state.data } />
       </div>
     );
   }

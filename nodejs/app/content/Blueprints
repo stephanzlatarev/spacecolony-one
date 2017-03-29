@@ -1,0 +1,17 @@
+[
+  {
+    "type": "NavigationCard",
+    "title": "Mars Habitats",
+    "text": "Build habitats on Mars"
+  },
+  {
+    "type": "NavigationCard",
+    "title": "Space Habitats",
+    "text": "Build habitats in deep space"
+  },
+  {
+    "type": "NavigationCard",
+    "title": "Terraformed Mars",
+    "text": "Settle on a terraformed Mars"
+  }
+]
