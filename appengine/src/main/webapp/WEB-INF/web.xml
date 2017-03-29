@@ -9,12 +9,12 @@
   </welcome-file-list>
 
   <servlet>
-    <servlet-name>empty</servlet-name>
-    <servlet-class>spacecolony.EmptyServlet</servlet-class>
+    <servlet-name>content</servlet-name>
+    <servlet-class>spacecolony.ContentServlet</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>empty</servlet-name>
-    <url-pattern>/empty</url-pattern>
+    <servlet-name>content</servlet-name>
+    <url-pattern>/content/*</url-pattern>
   </servlet-mapping>
 
 </web-app>
