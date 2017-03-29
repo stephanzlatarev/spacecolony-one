@@ -1,8 +1,7 @@
 import React from 'react';
 
-import {Panel} from 'react-bootstrap';
-
 import NavigationPage from './NavigationPage.js';
+import NavigationPath from './NavigationPath.js';
 
 export default class Navigation extends React.Component {
 
@@ -58,33 +57,9 @@ export default class Navigation extends React.Component {
   }
 
   render() {
-    let path;
-    if (this.state.path.length > 1) {
-      let navigateTo = this.navigateTo.bind(this);
-
-      let parts = [];
-      this.state.path.forEach(function(part) {
-        let click = function() {
-          navigateTo(part);
-        };
-  
-        parts.push(
-          <span className="navpath" onClick={ click }>
-            { part } :
-          </span>
-        );
-      });
-
-      path = (
-        <Panel>
-          { parts }
-        </Panel>
-      );
-    }
-
     return (
       <div>
-        { path }
+        <NavigationPath path={ this.state.path } navigate={ this.navigateTo.bind(this) } />
         <NavigationPage data={ this.state.data } />
       </div>
     );
