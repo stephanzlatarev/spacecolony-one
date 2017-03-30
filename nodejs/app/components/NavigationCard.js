@@ -6,7 +6,10 @@ export default class NavigationCard extends React.Component {
 
   onClick() {
     // ga('send', 'event', 'Navigation', this.props.data.title);
-    window.spacecolony.navigateTo(this.props.navigation);
+    window.spacecolony.navigateTo({
+      label: this.props.title,
+      navigation: this.props.navigation
+    });
   }
 
   render() {

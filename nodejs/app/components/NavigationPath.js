@@ -18,7 +18,7 @@ export default class NavigationPath extends React.Component {
   
         parts.push(
           <span className="navpath" onClick={ click }>
-            { part } :
+            { part.label } :
           </span>
         );
       });

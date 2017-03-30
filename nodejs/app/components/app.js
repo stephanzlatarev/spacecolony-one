@@ -14,4 +14,5 @@ export default class App extends React.Component {
 }
 
 export {default as Headline} from './Headline';
+export {default as MissionCard} from './MissionCard';
 export {default as NavigationCard} from './NavigationCard';

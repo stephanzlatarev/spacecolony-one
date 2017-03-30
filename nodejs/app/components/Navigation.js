@@ -16,7 +16,10 @@ export default class Navigation extends React.Component {
       navigateTo: this.navigateTo.bind(this)
     };
 
-    this.navigateTo('Home');
+    this.navigateTo({
+      label: 'Home',
+      navigation: 'Home'
+    });
   }
 
   selection() {
@@ -32,7 +35,7 @@ export default class Navigation extends React.Component {
       this.state.data = null;
 
       for (let part in path) {
-        if (path[part] === page) {
+        if (path[part].navigation === page.navigation) {
           break;
         } else {
           this.state.path.push(path[part]);
@@ -47,9 +50,9 @@ export default class Navigation extends React.Component {
   }
 
   downloadContent(page) {
-    window.$.getJSON('/content/' + page, function(data) {
+    window.$.getJSON('/content/' + page.navigation, function(data) {
       // this if avoids jumping between pages when one download is slower than others
-      if (this.selection() === page) {
+      if (this.selection().navigation === page.navigation) {
         this.state.data = data;
         this.setState(this.state);
       }
