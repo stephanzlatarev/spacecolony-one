@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee"
-  xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
-  xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
-  version="2.5">
+<web-app
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns="http://java.sun.com/xml/ns/javaee"
+  xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+  xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" 
+  version="3.0">
 
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
@@ -15,6 +17,18 @@
   <servlet-mapping>
     <servlet-name>content</servlet-name>
     <url-pattern>/content/*</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>react</servlet-name>
+    <servlet-class>spacecolony.NavigationServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>react</servlet-name>
+    <url-pattern>/Home</url-pattern>
+    <url-pattern>/Blueprints/*</url-pattern>
+    <url-pattern>/Science/*</url-pattern>
+    <url-pattern>/Experience/*</url-pattern>
   </servlet-mapping>
 
 </web-app>

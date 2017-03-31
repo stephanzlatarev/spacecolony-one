@@ -21,10 +21,17 @@ export default class Navigation extends React.Component {
       }
     }.bind(this);
 
-    this.navigateTo({
-      label: 'Home',
-      navigation: 'Home'
-    });
+    if (this.props.path && (this.props.path.length > 1)) {
+      this.navigateTo({
+        label: 'Back',
+        navigation: this.props.path.substring(1)
+      });
+    } else {
+      this.navigateTo({
+        label: 'Home',
+        navigation: 'Home'
+      });
+    }
   }
 
   selection() {
@@ -52,7 +59,7 @@ export default class Navigation extends React.Component {
           this.state.data = data;
           this.setState(this.state);
 
-          window.history.pushState(this.state, null, page.navigation);
+          window.history.pushState(this.state, null, '/' + page.navigation);
         }
       }.bind(this));
     }

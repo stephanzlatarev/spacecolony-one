@@ -1,0 +1,46 @@
+[
+  {
+    "type": "NavigationCard",
+    "title": "Mars One Mission",
+    "text": "Mars One aims to establish a permanent human settlement on Mars. The blueprint representation here is still in progress. Read the full roadmap at http://www.mars-one.com"
+  },
+  {
+    "type": "BlueprintChart"
+  },
+  {
+    "type": "MissionCard",
+    "time": 2029.0,
+    "mission": "First crew cargo missions",
+    "transformations": [
+      "6 cargo missions move 2 rovers, 2 living units, 2 life support units, 1 supply unit to Mars outpost location"
+    ]
+  },
+  {
+    "type": "MissionCard",
+    "time": 2030.0,
+    "mission": "Outpost operational",
+    "transformations": [
+      "Thin-film solar panels transform sunlight into electricity within life support units",
+      "Life support unit transforms Martian soil into water and oxygen within living units",
+      "Life support unit transforms Martian atmosphere into nitrogen and argon within living units",
+      "Rover transforms Martian soil into radiation shield within living units"
+    ]
+  },
+  {
+    "type": "MissionCard",
+    "time": 2032.0,
+    "mission": "First crew landing",
+    "transformations": [
+      "Mars Transit Vehicle moves 4 astronauts to Mars outpost location"
+    ]
+  },
+  {
+    "type": "MissionCard",
+    "time": 2032.0,
+    "mission": "Next crew (every 26 months)",
+    "transformations": [
+      "6 cargo missions move 2 rovers, 2 living units, 2 life support units, 1 supply unit to Mars outpost location",
+      "Mars Transit Vehicle moves 4 astronauts to Mars outpost location"
+    ]
+  }
+]

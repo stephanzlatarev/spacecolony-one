@@ -6,7 +6,7 @@
   },
   {
     "type": "NavigationCard",
-    "navigation": "LifeSupport",
+    "navigation": "Science/LifeSupport",
     "title": "Life support",
     "text": "Protection. Heat. Air. Water. Food supplies."
   },

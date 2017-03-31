@@ -11,7 +11,8 @@ const routeManager = Object.assign({}, baseManager, {
     const router = express.Router();
 
     router.get('/content/*', (req, res) => {
-      fs.readFile('./app/content/' + req.params[0], 'utf8', function(error, input) {
+      let file = req.params[0].replace(/\//g, '');
+      fs.readFile('./app/content/' + file, 'utf8', function(error, input) {
         res.json(JSON.parse(input));
       });
     });
