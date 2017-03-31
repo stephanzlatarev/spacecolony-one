@@ -32,7 +32,6 @@ export default class Navigation extends React.Component {
       let path = this.state.path;
 
       this.state.path = [];
-      this.state.data = null;
 
       for (let part in path) {
         if (path[part].navigation === page.navigation) {

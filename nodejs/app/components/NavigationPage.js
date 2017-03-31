@@ -2,8 +2,6 @@ import React from 'react';
 
 import * as app from './app.js';
 
-import Loading from './Loading.js';
-
 export default class NavigationPage extends React.Component {
 
   constructor(props) {
@@ -21,19 +19,16 @@ export default class NavigationPage extends React.Component {
   }
 
   render() {
-    let find = this.find.bind(this);
     let cards = [];
 
     if (this.props.data) {
+      let find = this.find.bind(this);
+
       this.props.data.forEach(function(card) {
         cards.push(
           React.createElement(find(card.type), card)
         );
       });
-    } else {
-      cards.push(
-        <Loading />
-      );
     }
 
     return (
