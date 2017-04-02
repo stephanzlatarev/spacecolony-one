@@ -1,3 +1,6 @@
+# Eclipse files
+.settings
+
 # Logs
 logs
 *.log

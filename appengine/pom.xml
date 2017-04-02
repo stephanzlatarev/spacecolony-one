@@ -41,6 +41,28 @@
         <artifactId>appengine-maven-plugin</artifactId>
         <version>1.9.31</version>
       </plugin>
+      
+      <plugin>
+        <groupId>com.samaxes.maven</groupId>
+        <artifactId>minify-maven-plugin</artifactId>
+        <version>1.7.6</version>
+        <executions>
+          <execution>
+            <configuration>
+              <!-- <jsSourceDir>src/main/webapp/assets/js</jsSourceDir> -->
+              <jsSourceDir>assets/js</jsSourceDir>
+              <jsSourceFiles>
+                <jsSourceFile>app.js</jsSourceFile>
+              </jsSourceFiles>
+              <jsFinalFile>app.js</jsFinalFile>
+              <jsEngine>CLOSURE</jsEngine>
+            </configuration>
+            <goals>
+              <goal>minify</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
     </plugins>
   </build>
 </project>
