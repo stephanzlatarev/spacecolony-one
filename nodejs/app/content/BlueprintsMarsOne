@@ -5,7 +5,7 @@
     "text": "Mars One aims to establish a permanent human settlement on Mars. The blueprint representation here is still in progress. Read the full roadmap at http://www.mars-one.com"
   },
   {
-    "type": "BlueprintChart"
+    "type": "BlueprintSimulation"
   },
   {
     "type": "MissionCard",
@@ -24,6 +24,14 @@
       "Life support unit transforms Martian soil into water and oxygen within living units",
       "Life support unit transforms Martian atmosphere into nitrogen and argon within living units",
       "Rover transforms Martian soil into radiation shield within living units"
+    ]
+  },
+  {
+    "type": "MissionCard",
+    "time": 2032.0,
+    "mission": "TV reality show",
+    "transformations": [
+      "License fees for TV reality show generate 6 billion USD per year"
     ]
   },
   {
