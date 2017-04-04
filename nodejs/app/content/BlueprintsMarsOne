@@ -8,17 +8,17 @@
     "type": "BlueprintSimulation"
   },
   {
-    "type": "MissionCard",
-    "time": 2029.0,
+    "type": "Mission",
     "mission": "First crew cargo missions",
+    "launch": 2029.0,
     "transformations": [
       "6 cargo missions move 2 rovers, 2 living units, 2 life support units, 1 supply unit to Mars outpost location"
     ]
   },
   {
-    "type": "MissionCard",
-    "time": 2030.0,
+    "type": "Mission",
     "mission": "Outpost operational",
+    "launch": 2030.0,
     "transformations": [
       "Thin-film solar panels transform sunlight into electricity within life support units",
       "Life support unit transforms Martian soil into water and oxygen within living units",
@@ -27,25 +27,25 @@
     ]
   },
   {
-    "type": "MissionCard",
-    "time": 2032.0,
+    "type": "Mission",
     "mission": "TV reality show",
+    "launch": 2032.0,
     "transformations": [
       "License fees for TV reality show generate 6 billion USD per year"
     ]
   },
   {
-    "type": "MissionCard",
-    "time": 2032.0,
+    "type": "Mission",
     "mission": "First crew landing",
+    "launch": 2032.0,
     "transformations": [
       "Mars Transit Vehicle moves 4 astronauts to Mars outpost location"
     ]
   },
   {
-    "type": "MissionCard",
-    "time": 2032.0,
-    "mission": "Next crew (every 26 months)",
+    "type": "Mission",
+    "mission": "Next crew",
+    "launch": 2032.0,
     "transformations": [
       "6 cargo missions move 2 rovers, 2 living units, 2 life support units, 1 supply unit to Mars outpost location",
       "Mars Transit Vehicle moves 4 astronauts to Mars outpost location"

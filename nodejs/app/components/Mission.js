@@ -2,7 +2,7 @@ import React from 'react';
 
 import {Panel} from 'react-bootstrap';
 
-export default class MissionCard extends React.Component {
+export default class Mission extends React.Component {
 
   render() {
     let transformations = [];
@@ -14,7 +14,10 @@ export default class MissionCard extends React.Component {
     });
 
     return (
-      <Panel header={ 'Year ' + Math.floor(this.props.time) + ': ' + this.props.mission }>
+      <Panel
+        header={
+          'Launch "' + this.props.mission + '"' + ' in year ' + Math.floor(this.props.launch)
+        }>
         { transformations }
       </Panel>
     );

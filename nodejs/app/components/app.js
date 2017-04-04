@@ -15,6 +15,6 @@ export default class App extends React.Component {
 
 export {default as Headline} from './Headline';
 export {default as BlueprintSimulation} from './BlueprintSimulation';
-export {default as MissionCard} from './MissionCard';
+export {default as Mission} from './Mission';
 export {default as NavigationCard} from './NavigationCard';
 export {default as ScienceCard} from './ScienceCard';
