@@ -9,10 +9,14 @@
   },
   {
     "type": "Mission",
-    "mission": "First crew cargo missions",
+    "mission": "Send cargo",
     "launch": 2029.0,
+    "system": "Cargo mission",
+    "yield": {
+      "1": {"cash": -6000}
+    },
     "transformations": [
-      "6 cargo missions move 2 rovers, 2 living units, 2 life support units, 1 supply unit to Mars outpost location"
+      "Cargo mission moves 2 rovers, 2 living units, 2 life support units, 1 supply unit to Mars outpost location"
     ]
   },
   {
@@ -30,25 +34,34 @@
     "type": "Mission",
     "mission": "TV reality show",
     "launch": 2032.0,
+    "cycle": 1,
+    "system": "Broadcasting rights fees for TV reality show",
+    "yield": {
+      "0": {"cash": 6000}
+    }
+  },
+  {
+    "type": "Mission",
+    "mission": "Send cargo",
+    "launch": 2032.0,
+    "cycle": 2,
+    "system": "Cargo mission",
+    "yield": {
+      "1": {"cash": -6000}
+    },
     "transformations": [
-      "License fees for TV reality show generate 6 billion USD per year"
+      "Cargo mission moves 2 living units, 2 life support units, 1 supply unit to Mars outpost location"
     ]
   },
   {
     "type": "Mission",
-    "mission": "First crew landing",
+    "mission": "Crew landing",
     "launch": 2032.0,
-    "transformations": [
-      "Mars Transit Vehicle moves 4 astronauts to Mars outpost location"
-    ]
-  },
-  {
-    "type": "Mission",
-    "mission": "Next crew",
-    "launch": 2032.0,
-    "transformations": [
-      "6 cargo missions move 2 rovers, 2 living units, 2 life support units, 1 supply unit to Mars outpost location",
-      "Mars Transit Vehicle moves 4 astronauts to Mars outpost location"
-    ]
+    "cycle": 2,
+    "system": "Mars Transit Vehicle",
+    "yield": {
+      "0": {"cash": -4000},
+      "1": {"population": 4}
+    }
   }
 ]

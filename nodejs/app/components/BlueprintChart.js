@@ -13,7 +13,7 @@ export default class BlueprintChart extends React.Component {
           />
           <YAxis interval={ 0 } />
           <CartesianGrid strokeDasharray='1 1' />
-          <Area type='linear' dataKey='metric' />
+          <Area type='linear' dataKey='metric' isAnimationActive={ false } />
         </AreaChart>
       </ResponsiveContainer>
     );

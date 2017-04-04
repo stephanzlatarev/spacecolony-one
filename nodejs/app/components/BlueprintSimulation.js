@@ -22,19 +22,22 @@ export default class BlueprintSimulation extends React.Component {
 
   simulate(metric) {
     let data = [];
-
-    let plan = [
-      {launch: 2029, hint: 'cargo', yield: {time: 2, cash: -6000}},
-      {launch: 2032, hint: 'crew', yield: {time: 2, population: 4, cash: -4000}},
-      {launch: 2032, hint: 'show', yield: {time: 1, cash: 6000}}
-    ];
+    let plan = this.props.page;
 
     let volume = 0;
     let year;
     let calculate = function(mission) {
-      if ((year >= mission.launch) && mission.yield[metric]
-        && ((year - mission.launch) % mission.yield.time === 0)) {
-        volume = volume + mission.yield[metric];
+      if ((year >= mission.launch) && (mission.yield)) {
+        let tick = year - mission.launch;
+        if (mission.cycle) {
+          tick = tick % mission.cycle;
+        }
+
+        let y = mission.yield[tick];
+
+        if (y && y[metric]) {
+          volume = volume + y[metric];
+        }
       }
     };
     for (year = 2001; year <= 2100; year = year + 1) {

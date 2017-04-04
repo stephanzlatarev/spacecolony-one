@@ -1,6 +1,9 @@
 # Eclipse files
 .settings
 
+# Generated javascript
+app/public/js/app.js
+
 # Logs
 logs
 *.log
