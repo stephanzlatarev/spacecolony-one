@@ -5,8 +5,7 @@ import {Col, Image, Panel} from 'react-bootstrap';
 export default class ScienceCard extends React.Component {
 
   onClick() {
-    console.log('open', this.props.navigation);
-    window.open(this.props.navigation, "_blank");
+    window.open(this.props.navigation, '_blank');
   }
 
   render() {

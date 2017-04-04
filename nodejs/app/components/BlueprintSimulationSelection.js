@@ -7,7 +7,7 @@ export default class BlueprintSimulationSelection extends React.Component {
   render() {
     let metrics = {
       population: 'Population of colony',
-      cash: 'Cash (million USD)'
+      cash: 'Cash (in USD millions)'
     };
     let menu = [];
     for (let key in metrics) {
