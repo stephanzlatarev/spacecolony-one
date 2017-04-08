@@ -62,6 +62,10 @@ export default class Navigation extends React.Component {
           window.history.pushState(this.state, null, '/' + page.navigation);
         }
       }.bind(this));
+
+      if (window.ga) {
+        window.ga('send', 'pageview', '/' + page.navigation);
+      }
     }
   }
 
