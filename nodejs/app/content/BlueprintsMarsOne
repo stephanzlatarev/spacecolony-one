@@ -61,7 +61,7 @@
     "system": "Mars Transit Vehicle",
     "yield": {
       "0": {"cash": -4000},
-      "1": {"population": 4}
+      "1": {"Human": 4}
     }
   }
 ]
