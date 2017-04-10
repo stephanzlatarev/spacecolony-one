@@ -11,12 +11,12 @@ export default class BlueprintSimulationSelection extends React.Component {
     };
     let metric = {
       cash: 'cash',
-      oxygen: 'oxygen',
+      air: 'breathable air',
       Human: 'population'
     };
     let unit = {
       cash: 'USD millions',
-      oxygen: 'liters',
+      air: 'liters',
       Human: 'persons'
     };
 

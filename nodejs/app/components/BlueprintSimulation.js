@@ -36,7 +36,7 @@ export default class BlueprintSimulation extends React.Component {
     let knowledgebase = {
       Human: {
         flows: {
-          oxygen: -11000,
+          air: -11000,
           'carbon dioxide': 1
         }
       }
