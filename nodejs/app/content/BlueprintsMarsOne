@@ -2,7 +2,8 @@
   {
     "type": "NavigationCard",
     "title": "Mars One Mission",
-    "text": "Mars One aims to establish a permanent human settlement on Mars. The blueprint representation here is still in progress. Read the full roadmap at http://www.mars-one.com"
+    "text": "Mars One aims to establish a permanent human settlement on Mars.",
+    "disclaimer": "This blueprint representation here is an interpretation by SpaceColony.One. Read the source roadmap at http://www.mars-one.com"
   },
   {
     "type": "BlueprintSimulation"

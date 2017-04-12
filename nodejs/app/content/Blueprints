@@ -1,14 +1,26 @@
 [
   {
     "type": "NavigationCard",
+    "navigation": "Blueprints/ISS",
+    "title": "International Space Station",
+    "source": "https://www.nasa.gov/mission_pages/station/main/index.html",
+    "image": "https://www.nasa.gov/images/content/464785main_s131e011053_inline.jpg",
+    "text": "The International Space Station (ISS) is a habitable artificial satellite in low Earth orbit. Its first component launched into orbit in 1998. The ISS consists of pressurised modules, external trusses, solar arrays, and other components. The ISS serves as a microgravity and space environment research laboratory in which crew members conduct experiments in biology, human biology, physics, astronomy, meteorology, and other fields. The station is suited for the testing of spacecraft systems and equipment required for missions to the Moon and Mars."
+  },
+  {
+    "type": "NavigationCard",
     "navigation": "Blueprints/MarsOne",
     "title": "Mars One Mission",
-    "text": "Mars One aims to establish a permanent human settlement on Mars. The blueprint representation here is still in progress. Read the full roadmap at http://www.mars-one.com"
+    "source": "http://www.mars-one.com",
+    "image": "http://www.mars-one.com/images/tabs/_tab/settlement-expansion.jpg",
+    "text": "Mars One aims to establish a permanent human settlement on Mars."
   },
   {
     "type": "NavigationCard",
     "navigation": "Blueprints/SpaceX",
     "title": "SpaceX Self-Sustaining City on Mars",
-    "text": "To make Mars trips possible on a large-enough scale to create a self-sustaining city, full reusability is essential. The blueprint representation here is still in progress. Read the plan at http://www.spacex.com"
+    "source": "http://www.spacex.com",
+    "image": "http://www.spacex.com/sites/spacex/files/styles/featured_news_widget_image/public/field/image/dragoncrew.8k.jpg",
+    "text": "To make Mars trips possible on a large-enough scale to create a self-sustaining city, full reusability is essential."
   }
 ]

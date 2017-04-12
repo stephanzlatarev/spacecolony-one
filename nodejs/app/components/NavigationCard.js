@@ -17,14 +17,36 @@ export default class NavigationCard extends React.Component {
     let click = (this.props.navigation) ? this.onClick.bind(this) : null;
     let image;
     let textcol = 12;
+    let source;
+    let disclaimer;
 
     if (this.props.image) {
+      let imagesrc = (this.props.image.startsWith('http'))
+        ? this.props.image
+        : '/assets/pics/' + this.props.image;
       image = (
         <Col sm={ 3 }>
-          <Image src={ '/assets/pics/' + this.props.image } responsive />
+          <Image src={ imagesrc } responsive />
         </Col>
       );
       textcol = 9;
+    }
+
+    if (this.props.source) {
+      source = (
+        <div style={ {color: 'LightSteelBlue'} }>
+          Source:&nbsp;
+          <a href={ this.props.source }>{ this.props.source }</a>
+        </div>
+      );
+    }
+
+    if (this.props.disclaimer) {
+      disclaimer = (
+        <div style={ {color: 'gray', fontStyle: 'italic'} }>
+          { this.props.disclaimer }
+        </div>
+      );
     }
 
     return (
@@ -32,7 +54,9 @@ export default class NavigationCard extends React.Component {
         { image }
         <Col sm={ textcol }>
           <h2>{ this.props.title }</h2>
+          { source }
           <p>{ this.props.text }</p>
+          { disclaimer }
         </Col>
       </Panel>
     );
