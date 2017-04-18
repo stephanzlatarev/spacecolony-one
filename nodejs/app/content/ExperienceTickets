@@ -1,0 +1,9 @@
+[
+  {
+    "type": "NavigationCard",
+    "text": "Build your program now and get 20% discount"
+  },
+  {
+    "type": "TicketBuilder"
+  }
+]

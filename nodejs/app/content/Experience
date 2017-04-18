@@ -2,5 +2,12 @@
   {
     "type": "NavigationCard",
     "text": "We are building a space colony prototype inspired by the featured blueprints. It will open on 20.02.2020 to everyone to visit. If you wish to support us, join us in the crowd-funding project. Contact us."
+  },
+  {
+    "type": "NavigationCard",
+    "navigation": "Experience/Tickets",
+    "title": "Tickets",
+    "image": "teddies.jpg",
+    "text": "Build your program now and get 20% discount"
   }
 ]

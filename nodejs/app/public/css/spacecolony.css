@@ -56,6 +56,13 @@ h2 {
   margin-top: 0px;
 }
 
+h3 {
+  font-family: 'Audiowide', cursive;
+  font-size: 1em;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
 a:link {
   color: LightSteelBlue;
   text-decoration: none;
@@ -85,5 +92,9 @@ a:active {
   margin-right: 5px;
   font-family: 'Audiowide', cursive;
   font-size: 1.0em;
+  cursor: pointer;
+}
+
+.clickable {
   cursor: pointer;
 }
