@@ -20,6 +20,15 @@
   </servlet-mapping>
 
   <servlet>
+    <servlet-name>prospect</servlet-name>
+    <servlet-class>spacecolony.ProspectServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>prospect</servlet-name>
+    <url-pattern>/prospect</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
     <servlet-name>react</servlet-name>
     <servlet-class>spacecolony.NavigationServlet</servlet-class>
   </servlet>
@@ -30,5 +39,17 @@
     <url-pattern>/Science/*</url-pattern>
     <url-pattern>/Experience/*</url-pattern>
   </servlet-mapping>
+
+  <filter>
+    <filter-name>ObjectifyFilter</filter-name>
+    <filter-class>com.googlecode.objectify.ObjectifyFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>ObjectifyFilter</filter-name>
+    <url-pattern>/prospect/*</url-pattern>
+  </filter-mapping>
+  <listener>
+    <listener-class>spacecolony.Initialization</listener-class>
+  </listener>
 
 </web-app>
