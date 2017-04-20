@@ -234,6 +234,10 @@ export default class TicketBuilder extends React.Component {
     this.state.fastforward = true;
     this.state.page = this.state.page + 1;
     this.setState(this.state);
+
+    if (window.ga) {
+      window.ga('send', 'pageview', '/Experience/Tickets/' + this.state.page);
+    }
   }
 
   completeTicket(event) {
@@ -244,6 +248,10 @@ export default class TicketBuilder extends React.Component {
       .done(function() {
         console.log('Done');
       });
+
+      if (window.ga) {
+        window.ga('send', 'pageview', '/Experience/Tickets/Sent');
+      }
     }
 
     return false;
