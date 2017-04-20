@@ -155,7 +155,7 @@ export default class TicketBuilder extends React.Component {
             {
               key: 'pioneer',
               text: 'The first one',
-              description: 'I want to be the first one'
+              description: 'I want to join the very first crew'
             },
             {
               key: 'early',

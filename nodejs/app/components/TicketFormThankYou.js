@@ -16,7 +16,7 @@ export default class TicketFormThankYou extends React.Component {
         </Modal.Header>
 
         <Modal.Body>
-          <p>Expect your discount voucher in you mail inbox by tomorrow!</p>
+          <p>Expect your discount voucher in you mail inbox in 48 hours!</p>
           <p>If you do not receive it by then, please, contact us for support!</p>
         </Modal.Body>
 
