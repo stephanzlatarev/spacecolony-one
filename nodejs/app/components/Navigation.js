@@ -13,6 +13,10 @@ export default class Navigation extends React.Component {
     };
 
     window.spacecolony = {
+      home: {
+        label: 'Home',
+        navigation: 'Home'
+      },
       navigateTo: this.navigateTo.bind(this)
     };
     window.onpopstate = function(e) {
@@ -27,10 +31,7 @@ export default class Navigation extends React.Component {
         navigation: this.props.path.substring(1)
       });
     } else {
-      this.navigateTo({
-        label: 'Home',
-        navigation: 'Home'
-      });
+      this.navigateTo(window.spacecolony.home);
     }
   }
 

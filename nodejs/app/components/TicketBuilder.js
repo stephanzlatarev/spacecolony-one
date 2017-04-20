@@ -3,6 +3,7 @@ import React from 'react';
 import {Button, Col, Form, FormControl, FormGroup, Glyphicon, Panel, Row} from 'react-bootstrap';
 
 import TicketFormChoice from './TicketFormChoice';
+import TicketFormThankYou from './TicketFormThankYou';
 
 export default class TicketBuilder extends React.Component {
 
@@ -171,7 +172,8 @@ export default class TicketBuilder extends React.Component {
         }
       ],
       page: 0,
-      fastforward: true
+      fastforward: true,
+      done: false
     };
 
     this.state.ticket = {};
@@ -254,8 +256,9 @@ export default class TicketBuilder extends React.Component {
     if (this.state.emailisvalid) {
       window.$.post('/prospect', JSON.stringify(this.state.ticket))
       .done(function() {
-        console.log('Done');
-      });
+        this.state.done = true;
+        this.setState(this.state);
+      }.bind(this));
 
       if (window.ga) {
         window.ga('send', 'pageview', '/Experience/Tickets/Sent');
@@ -414,6 +417,8 @@ export default class TicketBuilder extends React.Component {
         </Row>
 
         { buttons }
+
+        <TicketFormThankYou show={ this.state.done } />
       </Panel>
     );
   }
