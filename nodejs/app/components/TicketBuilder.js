@@ -198,7 +198,10 @@ export default class TicketBuilder extends React.Component {
     this.setState(this.state);
 
     if (this.state.fastforward) {
-      this.moveNext();
+      let nextpage = this.state.page + 1;
+      window.setTimeout(function() {
+        this.moveTo(nextpage);
+      }.bind(this), 300);
     }
   }
 
@@ -226,17 +229,22 @@ export default class TicketBuilder extends React.Component {
 
   moveBack() {
     this.state.fastforward = false;
-    this.state.page = Math.max(this.state.page - 1, 0);
-    this.setState(this.state);
+    this.moveTo(Math.max(this.state.page - 1, 0));
   }
 
   moveNext() {
     this.state.fastforward = true;
-    this.state.page = this.state.page + 1;
-    this.setState(this.state);
+    this.moveTo(this.state.page + 1);
+  }
 
-    if (window.ga) {
-      window.ga('send', 'pageview', '/Experience/Tickets/' + this.state.page);
+  moveTo(page) {
+    if (this.state.page !== page) {
+      this.state.page = page;
+      this.setState(this.state);
+
+      if (window.ga) {
+        window.ga('send', 'pageview', '/Experience/Tickets/' + page);
+      }
     }
   }
 
