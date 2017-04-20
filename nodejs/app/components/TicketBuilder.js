@@ -381,7 +381,13 @@ export default class TicketBuilder extends React.Component {
     }
 
     let buttons = null;
-    if (this.state.page < this.state.program.length) {
+    if ((this.state.page === 0) && (!this.getSelected(0))) {
+      buttons = (
+        <p style={ {fontStyle: 'italic', fontSize: '90%'} }>
+          Click on one of the three boxes to select the option!
+        </p>
+      );
+    } else if (this.state.page < this.state.program.length) {
       buttons = (
         <Row>
           <Col sm={ 2 }>
