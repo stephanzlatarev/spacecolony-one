@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {Button, Col, Form, FormControl, FormGroup, Panel, Row} from 'react-bootstrap';
+import {Button, Col, Form, FormControl, FormGroup, Glyphicon, Panel, Row} from 'react-bootstrap';
 
 import TicketFormChoice from './TicketFormChoice';
 
@@ -201,7 +201,7 @@ export default class TicketBuilder extends React.Component {
       let nextpage = this.state.page + 1;
       window.setTimeout(function() {
         this.moveTo(nextpage);
-      }.bind(this), 300);
+      }.bind(this), 150);
     }
   }
 
@@ -270,14 +270,19 @@ export default class TicketBuilder extends React.Component {
     let sectionTicketSize;
 
     let cart = [];
-    for (let p in this.state.program) {
+    for (let p = 0; p < this.state.program.length; p++) {
       if (this.state.program[p]) {
+        let selection = this.getSelected(p);
+        let status = (selection) ? 'check' : 'unchecked';
+        let style = (this.state.page === p) ? 'text-primary' : null;
         cart.push(
-          <div><p>
-            {this.state.program[p].label}
-            :&nbsp;
+          <div>
+            <Glyphicon className={ style } glyph={ status } />
+            &nbsp;
+            { this.state.program[p].label }
+            &nbsp;
             { this.getSelected(p) }
-          </p></div>
+          </div>
         );
       }
     }
