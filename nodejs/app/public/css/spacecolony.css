@@ -89,10 +89,14 @@ a:active {
 }
 
 .navpath {
-  margin-right: 5px;
   font-family: 'Audiowide', cursive;
   font-size: 1.0em;
   cursor: pointer;
+}
+
+.navpath-separator {
+  margin: 0px 5px;
+  color: gray;
 }
 
 .clickable {
