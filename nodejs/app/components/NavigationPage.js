@@ -26,10 +26,13 @@ export default class NavigationPage extends React.Component {
       let find = this.find.bind(this);
 
       data.forEach(function(card) {
-        card.page = data;
-        cards.push(
-          React.createElement(find(card.type), card)
-        );
+        let element = find(card.type);
+        if (element) {
+          card.page = data;
+          cards.push(
+            React.createElement(element, card)
+          );
+        }
       });
     }
 

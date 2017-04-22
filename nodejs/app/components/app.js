@@ -7,7 +7,9 @@ export default class App extends React.Component {
   render() {
     return (
       <div className="container">
-        <Navigation path={ window.location.pathname } />
+        <Navigation
+          path={ window.spacecolony.path }
+          data={ window.spacecolony.data } />
       </div>
     );
   }

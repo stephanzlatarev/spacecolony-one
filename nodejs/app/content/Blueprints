@@ -1,5 +1,12 @@
 [
   {
+    "type": "Meta",
+    "path": [
+      {"label": "Home", "navigation": ""},
+      {"label": "Blueprints", "navigation": "Blueprints"}
+    ]
+  },
+  {
     "type": "NavigationCard",
     "navigation": "Blueprints/ISS",
     "title": "International Space Station",

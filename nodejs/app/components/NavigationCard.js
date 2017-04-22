@@ -5,7 +5,6 @@ import {Col, Image, Panel} from 'react-bootstrap';
 export default class NavigationCard extends React.Component {
 
   onClick() {
-    // ga('send', 'event', 'Navigation', this.props.data.title);
     window.spacecolony.navigateTo({
       label: this.props.title,
       navigation: this.props.navigation

@@ -10,15 +10,26 @@ const routeManager = Object.assign({}, baseManager, {
 
     const router = express.Router();
 
+    let readContent = function(request) {
+      let file = request.params[0].replace(/\//g, '');
+      if (!file || !file.length) {
+        file = 'Home';
+      }
+      return fs.readFileSync('./app/content/' + file, 'utf8');
+    };
+
     router.get('/content/*', (req, res) => {
-      let file = req.params[0].replace(/\//g, '');
-      fs.readFile('./app/content/' + file, 'utf8', function(error, input) {
-        res.json(JSON.parse(input));
-      });
+      res.json(JSON.parse(readContent(req)));
     });
 
     router.get('*', (req, res) => {
-      res.render('index');
+      if (req.params[0].indexOf('.') < 0) {
+        res.render('index', {
+          data: readContent(req)
+        });
+      } else {
+        res.status(404).send('Not found');
+      }
     });
 
     app.use('/', router);

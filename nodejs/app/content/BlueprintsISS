@@ -1,5 +1,13 @@
 [
   {
+    "type": "Meta",
+    "path": [
+      {"label": "Home", "navigation": ""},
+      {"label": "Blueprints", "navigation": "Blueprints"},
+      {"label": "Internation Space Station", "navigation": "Blueprints/ISS"}
+    ]
+  },
+  {
     "type": "NavigationCard",
     "title": "International Space Station",
     "text": "The International Space Station (ISS) is a habitable artificial satellite in low Earth orbit. Its first component launched into orbit in 1998. The ISS consists of pressurised modules, external trusses, solar arrays, and other components. The ISS serves as a microgravity and space environment research laboratory in which crew members conduct experiments in biology, human biology, physics, astronomy, meteorology, and other fields. The station is suited for the testing of spacecraft systems and equipment required for missions to the Moon and Mars. Find more at https://www.nasa.gov/mission_pages/station/main/index.html"

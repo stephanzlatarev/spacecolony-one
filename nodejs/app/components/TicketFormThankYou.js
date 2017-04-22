@@ -5,7 +5,7 @@ import {Button, Modal} from 'react-bootstrap';
 export default class TicketFormThankYou extends React.Component {
 
   onClose() {
-    window.spacecolony.navigateTo(window.spacecolony.home);
+    window.spacecolony.navigateHome();
   }
 
   render() {

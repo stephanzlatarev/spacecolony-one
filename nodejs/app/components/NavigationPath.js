@@ -7,7 +7,7 @@ export default class NavigationPath extends React.Component {
   render() {
     let view = null;
 
-    if (this.props.path.length > 1) {
+    if (this.props.path && (this.props.path.length > 1)) {
       let navigateTo = this.props.navigate;
 
       let parts = [];

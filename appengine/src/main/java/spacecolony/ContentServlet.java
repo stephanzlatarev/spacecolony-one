@@ -14,14 +14,21 @@ public class ContentServlet extends HttpServlet {
   @Override
   public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
     String file = request.getPathInfo().replaceAll("/", "");
-    InputStream stream = getServletContext().getResourceAsStream("/assets/content/" + file);
-    byte[] buffer = new byte[10240];
-
-    OutputStream output = response.getOutputStream();
-    for (int length = 0; (length = stream.read(buffer)) > 0;) {
-      output.write(buffer, 0, length);
+    if (file.length() == 0) {
+      file = "Home";
     }
-    output.close();
+
+    InputStream stream = getServletContext().getResourceAsStream("/assets/content/" + file);
+    if (stream != null) {
+      byte[] buffer = new byte[10240];
+  
+      OutputStream output = response.getOutputStream();
+      for (int length = 0; (length = stream.read(buffer)) > 0;) {
+        output.write(buffer, 0, length);
+      }
+      output.close();
+      stream.close();
+    }
   }
 
 }

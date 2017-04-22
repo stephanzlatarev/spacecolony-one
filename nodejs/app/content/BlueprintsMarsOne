@@ -1,5 +1,13 @@
 [
   {
+    "type": "Meta",
+    "path": [
+      {"label": "Home", "navigation": ""},
+      {"label": "Blueprints", "navigation": "Blueprints"},
+      {"label": "Mars One Mission", "navigation": "Blueprints/MarsOne"}
+    ]
+  },
+  {
     "type": "NavigationCard",
     "title": "Mars One Mission",
     "text": "Mars One aims to establish a permanent human settlement on Mars.",

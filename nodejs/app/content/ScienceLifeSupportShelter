@@ -1,5 +1,14 @@
 [
   {
+    "type": "Meta",
+    "path": [
+      {"label": "Home", "navigation": ""},
+      {"label": "Science", "navigation": "Science"},
+      {"label": "Life Support", "navigation": "Science/LifeSupport"},
+      {"label": "Shelter", "navigation": "Science/LifeSupport/Shelter"}
+    ]
+  },
+  {
     "type": "NavigationCard",
     "title": "Shelter",
     "text": "Humans are used to living in a place they can call a home. They need to sleep somewhere, too. The habitats of space colonies, in deep space, on planets or asteroids, additionally provide protection from radiation, extreme temperatures and keep the required atmospheric pressure and breathable air"

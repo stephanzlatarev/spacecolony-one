@@ -9,54 +9,33 @@ export default class Navigation extends React.Component {
     super(props);
 
     this.state = {
-      path: []
+      data: this.props.data
     };
 
-    window.spacecolony = {
-      home: {
-        label: 'Home',
-        navigation: 'Home'
-      },
-      navigateTo: this.navigateTo.bind(this)
-    };
+    window.spacecolony.navigateHome = this.navigateHome.bind(this);
+    window.spacecolony.navigateTo = this.navigateTo.bind(this);
+
     window.onpopstate = function(e) {
       if (e.state) {
         this.setState(e.state);
       }
     }.bind(this);
-
-    if (this.props.path && (this.props.path.length > 1)) {
-      this.navigateTo({
-        label: 'Back',
-        navigation: this.props.path.substring(1)
-      });
-    } else {
-      this.navigateTo(window.spacecolony.home);
-    }
   }
 
-  selection() {
-    let path = this.state.path;
-    return (path.length) ? path[path.length - 1] : '';
+  navigateHome() {
+    this.navigateTo({
+      label: 'Home',
+      navigation: ''
+    });
   }
 
   navigateTo(page) {
     if (page) {
-      let path = [];
-      for (let part in this.state.path) {
-        if (this.state.path[part].navigation === page.navigation) {
-          break;
-        } else {
-          path.push(this.state.path[part]);
-        }
-      }
-      path.push(page);
+      this.state.selection = page.navigation;
 
       window.$.getJSON('/content/' + page.navigation, function(data) {
         // this if avoids jumping between pages when one download is slower than others
-        let selection = path[path.length - 1];
-        if (selection.navigation === page.navigation) {
-          this.state.path = path;
+        if (this.state.selection === page.navigation) {
           this.state.data = data;
           this.setState(this.state);
 
@@ -70,10 +49,16 @@ export default class Navigation extends React.Component {
     }
   }
 
+  path() {
+    if (this.state.data && this.state.data[0] && this.state.data[0].type === 'Meta') {
+      return this.state.data[0].path;
+    }
+  }
+
   render() {
     return (
       <div>
-        <NavigationPath path={ this.state.path } navigate={ this.navigateTo.bind(this) } />
+        <NavigationPath path={ this.path() } navigate={ this.navigateTo.bind(this) } />
         <NavigationPage data={ this.state.data } />
       </div>
     );

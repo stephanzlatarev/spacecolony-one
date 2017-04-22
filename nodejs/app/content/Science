@@ -1,5 +1,12 @@
 [
   {
+    "type": "Meta",
+    "path": [
+      {"label": "Home", "navigation": ""},
+      {"label": "Science", "navigation": "Science"}
+    ]
+  },
+  {
     "type": "NavigationCard",
     "title": "Economics",
     "text": "Mining. Science."
