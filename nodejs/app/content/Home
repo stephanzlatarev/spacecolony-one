@@ -2,27 +2,27 @@
   {
     "type": "Headline",
     "image": "panorama.jpg",
-    "text": "Space Colony One open sources the blueprints for space colonization. Study, comment and create blueprints of colonies on the Moon, Mars and deep space. Link to science research. Experience the life of a space pioneer."
+    "text": "We invite you to a space colony where you can experience the life of XXI century space pioneers"
+  },
+  {
+    "type": "NavigationCard",
+    "navigation": "Experience",
+    "title": "Space Colony Park",
+    "image": "space-elevator.jpg",
+    "text": "Visit the space colony park for a 3-day adventure packed with high-tech space science, intense missions and mind-expanding experiences. Ride a space elevator, sleep in a colony base, eat space food, walk a crater in a space suit, talk to your family million miles away back home and do much more!"
   },
   {
     "type": "NavigationCard",
     "navigation": "Blueprints",
     "title": "Blueprints",
-    "image": "space-elevator.jpg",
-    "text": "Join the generation that builds the first space colony!"
+    "image": "blueprints.jpg",
+    "text": "Explore the plans for building human settlements beyond Earth. Compare them, discuss them or even create one of your own and join the generation that builds the first space colony"
   },
   {
     "type": "NavigationCard",
     "navigation": "Science",
     "title": "Science",
     "image": "farms.jpg",
-    "text": "Learn more about the science behind space exploration and colonization. Track the progress of new technology enabling the human race to expand into the Solar system and the universe."
-  },
-  {
-    "type": "NavigationCard",
-    "navigation": "Experience",
-    "title": "Experience",
-    "image": "teddies.jpg",
-    "text": "Experience the life of a pioneer in a space colony of the XXI century through a 3-day adventure packed with high-tech space science, intense missions and mind-expanding experiences. Ride a space elevator, sleep in a colony base, eat space food, walk a crater in a space suit, talk to your family million miles away back home and do much more!"
+    "text": "Learn more about the science behind space exploration and colonization. Track the progress of new technology enabling the human race to expand into the Solar system and beyond"
   }
 ]

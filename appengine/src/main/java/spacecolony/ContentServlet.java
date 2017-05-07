@@ -13,6 +13,8 @@ public class ContentServlet extends HttpServlet {
 
   @Override
   public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    response.setHeader("X-SpaceColonyOne-Country", request.getHeader("X-AppEngine-Country"));
+
     String file = request.getPathInfo().replaceAll("/", "");
     if (file.length() == 0) {
       file = "Home";
