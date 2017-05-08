@@ -1,0 +1,185 @@
+[
+  {
+    "type": "Meta",
+    "path": [
+      {"label": "Home", "navigation": ""},
+      {"label": "Experience", "navigation": "Experience"},
+      {"label": "Tickets", "navigation": "Experience/Tickets"}
+    ]
+  },
+  {
+    "type": "NavigationCard",
+    "title": "Colony opens 20.02.2020 - Get your 20% discount now",
+    "text": "Join a crew of up to 12 explorers on a mission to Mars. Experience the life in a space colony and explore the technologies on board. Build your program now and get 20% discount off the regular price",
+    "disclaimer": "The discount will only be valid for your selection of choices"
+  },
+  {
+    "type": "TicketBuilder",
+    "labels": {
+      "NEXT": "Next",
+      "BACK": "Back",
+      "OPTIONS_HINT": "Click on one of the three boxes to select the option!",
+      "CORRECT": "Let me correct it",
+      "TICKET_HEADER": "Your ticket:",
+      "TICKET_READY": "Your ticket is ready!",
+      "SEND_TO": "Send the discount voucher to",
+      "SEND_TO_HINT": "my email address"
+    },
+    "program": [
+      {
+        "key": "crew",
+        "label": "CREW",
+        "description": "Choose your crew. The colony crew is between 6 and 12 members",
+        "choices": [
+          {
+            "key": "solo",
+            "text": "Just me",
+            "description": "I will join any crew"
+          },
+          {
+            "key": "pair",
+            "text": "Me and a partner",
+            "description": "I will come with a partner and join any crew"
+          },
+          {
+            "key": "team",
+            "text": "My team",
+            "description": "My crew is complete with my family or colleagues"
+          }
+        ]
+      },
+      {
+        "key": "duration",
+        "label": "DURATION",
+        "description": "Choose the duration of your mission",
+        "choices": [
+          {
+            "key": "halfday",
+            "text": "Half day",
+            "description": "I will stay for half a day"
+          },
+          {
+            "key": "overnight",
+            "text": "Day and night",
+            "description": "I will come in the morning, sleep in the base and return the next afternoon"
+          },
+          {
+            "key": "days",
+            "text": "3+ days",
+            "description": "I will stay for at least three days"
+          }
+        ]
+      },
+      {
+        "key": "transport",
+        "label": "TRANSPORT",
+        "description": "Choose how you want to get to the base camp",
+        "choices": [
+          {
+            "key": "no",
+            "text": "Start from base",
+            "description": "I will start the trip from the base camp"
+          },
+          {
+            "key": "elevator",
+            "text": "By space elevator",
+            "description": "I will get to the base camp in a space elevator"
+          },
+          {
+            "key": "rocket",
+            "text": "By rocket",
+            "description": "I will get to the base camp in a rocket"
+          }
+        ]
+      },
+      {
+        "key": "food",
+        "label": "FOOD",
+        "description": "Choose what you eat in the colony",
+        "choices": [
+          {
+            "key": "earth",
+            "text": "Earth imports",
+            "description": "I will eat food imported from Earth"
+          },
+          {
+            "key": "3dprinted",
+            "text": "3D printed",
+            "description": "I will eat 3D-printed food"
+          },
+          {
+            "key": "garden",
+            "text": "I will gather",
+            "description": "I will eat the food my colony produces"
+          }
+        ]
+      },
+      {
+        "key": "missions",
+        "label": "MISSIONS",
+        "description": "Choose what missions you will engage in",
+        "choices": [
+          {
+            "key": "easy",
+            "text": "Leisure walk",
+            "description": "I will be looking around inside the habitat and will go outside the habitat in a space suit"
+          },
+          {
+            "key": "normal",
+            "text": "Routine",
+            "description": "I will engage in a routine exploration or mining mission"
+          },
+          {
+            "key": "hard",
+            "text": "Adrenaline rush",
+            "description": "I will engage in a rescue mission"
+          }
+        ]
+      },
+      {
+        "key": "souvenirs",
+        "label": "SOUVENIRS",
+        "description": "Choose what souvenirs you will take away",
+        "choices": [
+          {
+            "key": "no",
+            "text": "Only memories",
+            "description": "No souvenirs please"
+          },
+          {
+            "key": "gift",
+            "text": "Surprise gift",
+            "description": "I will expect to get photos and collected artifacts during my missions after my return to Earth"
+          },
+          {
+            "key": "shop",
+            "text": "Souvenir shop",
+            "description": "I will buy from the souvenir shop myself"
+          }
+        ]
+      },
+      {
+        "key": "when",
+        "label": "WHEN",
+        "description": "Choose when you want to go to the mission",
+        "choices": [
+          {
+            "key": "pioneer",
+            "text": "The first one",
+            "description": "I want to join the very first crew"
+          },
+          {
+            "key": "early",
+            "text": "In the first year",
+            "description": "I want to go within the first year after the colony is open"
+          },
+          {
+            "key": "lagger",
+            "text": "Some time later",
+            "description": "I will go to the colony some time later after I get feedback on the experience"
+          }
+        ]
+      }
+    ]
+  }
+]

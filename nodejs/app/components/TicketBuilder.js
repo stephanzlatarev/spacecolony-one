@@ -11,166 +11,6 @@ export default class TicketBuilder extends React.Component {
     super(props);
 
     this.state = {
-      program: [
-        {
-          key: 'crew',
-          label: 'CREW',
-          description: 'Choose your crew. The colony crew is between 6 and 12 members',
-          choices: [
-            {
-              key: 'solo',
-              text: 'Just me',
-              description: 'I will join any crew'
-            },
-            {
-              key: 'pair',
-              text: 'Me and a partner',
-              description: 'I will come with a partner and join any crew'
-            },
-            {
-              key: 'team',
-              text: 'My team',
-              description: 'My crew is complete with my family or colleagues'
-            }
-          ]
-        },
-        {
-          key: 'duration',
-          label: 'DURATION',
-          description: 'Choose the duration of your mission',
-          choices: [
-            {
-              key: 'halfday',
-              text: 'Half day',
-              description: 'I will stay for half a day'
-            },
-            {
-              key: 'overnight',
-              text: 'Day and night',
-              description: 'I will come in the morning, sleep in the base'
-                + ' and return the next afternoon'
-            },
-            {
-              key: 'days',
-              text: '3+ days',
-              description: 'I will stay for at least three days'
-            }
-          ]
-        },
-        {
-          key: 'transport',
-          label: 'TRANSPORT',
-          description: 'Choose how you want to get to the base camp',
-          choices: [
-            {
-              key: 'no',
-              text: 'Start from base',
-              description: 'I will start the trip from the base camp'
-            },
-            {
-              key: 'elevator',
-              text: 'By space elevator',
-              description: 'I will get to the base camp in a space elevator'
-            },
-            {
-              key: 'rocket',
-              text: 'By rocket',
-              description: 'I will get to the base camp in a rocket'
-            }
-          ]
-        },
-        {
-          key: 'food',
-          label: 'FOOD',
-          description: 'Choose what you eat in the colony',
-          choices: [
-            {
-              key: 'earth',
-              text: 'Earth imports',
-              description: 'I will eat food imported from Earth'
-            },
-            {
-              key: '3dprinted',
-              text: '3D printed',
-              description: 'I will eat 3D-printed food'
-            },
-            {
-              key: 'garden',
-              text: 'I will gather',
-              description: 'I will eat the food my colony produces'
-            }
-          ]
-        },
-        {
-          key: 'missions',
-          label: 'MISSIONS',
-          description: 'Choose what missions you will engage in',
-          choices: [
-            {
-              key: 'easy',
-              text: 'Leisure walk',
-              description: 'I will be looking around inside the habitat'
-                + ' and will go outside the habitat in a space suit'
-            },
-            {
-              key: 'normal',
-              text: 'Routine',
-              description: 'I will engage in a routine exploration or mining mission'
-            },
-            {
-              key: 'hard',
-              text: 'Adrenaline rush',
-              description: 'I will engage in a rescue mission'
-            }
-          ]
-        },
-        {
-          key: 'souvenirs',
-          label: 'SOUVENIRS',
-          description: 'Choose what souvenirs you will take away',
-          choices: [
-            {
-              key: 'no',
-              text: 'Only memories',
-              description: 'No souvenirs please'
-            },
-            {
-              key: 'gift',
-              text: 'Surprise gift',
-              description: 'I will expect to get photos and collected artifacts'
-                + ' during my missions after my return to Earth'
-            },
-            {
-              key: 'shop',
-              text: 'Souvenir shop',
-              description: 'I will buy from the souvenir shop myself'
-            }
-          ]
-        },
-        {
-          key: 'when',
-          label: 'WHEN',
-          description: 'Choose when you want to go to the mission',
-          choices: [
-            {
-              key: 'pioneer',
-              text: 'The first one',
-              description: 'I want to join the very first crew'
-            },
-            {
-              key: 'early',
-              text: 'In the first year',
-              description: 'I want to go within the first year after the colony is open'
-            },
-            {
-              key: 'lagger',
-              text: 'Some time later',
-              description: 'I will go to the colony some time later'
-               + ' after I get feedback on the experience'
-            }
-          ]
-        }
-      ],
       page: 0,
       fastforward: true,
       done: false
@@ -180,13 +20,13 @@ export default class TicketBuilder extends React.Component {
   }
 
   isSelected(choice) {
-    let p = this.state.program[this.state.page];
+    let p = this.props.program[this.state.page];
     return this.state.ticket[p.key] === p.choices[choice].key;
   }
 
   getSelected(p) {
-    let key = this.state.program[p].key;
-    let choices = this.state.program[p].choices;
+    let key = this.props.program[p].key;
+    let choices = this.props.program[p].choices;
     for (let c in choices) {
       if (choices[c] && (choices[c].key === this.state.ticket[key])) {
         return choices[c].text;
@@ -195,7 +35,7 @@ export default class TicketBuilder extends React.Component {
   }
 
   selectChoice(choice) {
-    let p = this.state.program[this.state.page];
+    let p = this.props.program[this.state.page];
     this.state.ticket[p.key] = p.choices[choice].key;
     this.setState(this.state);
 
@@ -273,8 +113,8 @@ export default class TicketBuilder extends React.Component {
     let sectionTicketSize;
 
     let cart = [];
-    for (let p = 0; p < this.state.program.length; p++) {
-      if (this.state.program[p]) {
+    for (let p = 0; p < this.props.program.length; p++) {
+      if (this.props.program[p]) {
         let selection = this.getSelected(p);
         let status = (selection) ? 'check' : 'unchecked';
         let style = (this.state.page === p) ? 'text-primary' : null;
@@ -282,7 +122,7 @@ export default class TicketBuilder extends React.Component {
           <div>
             <Glyphicon className={ style } glyph={ status } />
             &nbsp;
-            { this.state.program[p].label }
+            { this.props.program[p].label }
             &nbsp;
             { this.getSelected(p) }
           </div>
@@ -290,8 +130,8 @@ export default class TicketBuilder extends React.Component {
       }
     }
 
-    if (this.state.page < this.state.program.length) {
-      let form = this.state.program[this.state.page];
+    if (this.state.page < this.props.program.length) {
+      let form = this.props.program[this.state.page];
   
       let choices = [];
       for (let c = 0; c < 3; c++) {
@@ -329,33 +169,39 @@ export default class TicketBuilder extends React.Component {
 
     let sectionTicket = (
       <Col sm={ sectionTicketSize }>
-        <h2>Your ticket { (sectionTicketSize === 12) ? 'is ready' : '' }</h2>
+        <h2>
+          {
+            (sectionTicketSize === 12)
+            ? this.props.labels.TICKET_READY
+            : this.props.labels.TICKET_HEADER
+          }
+        </h2>
         { cart }
       </Col>
     );
 
     let buttonLeft = null;
-    if (this.state.page >= this.state.program.length) {
+    if (this.state.page >= this.props.program.length) {
       buttonLeft = (
         <Button bsSize="small" onClick={ this.moveBack.bind(this) }>
-          Let me correct it
+          { this.props.labels.CORRECT }
         </Button>
       );
     } else if (this.state.page > 0) {
       buttonLeft = (
         <Button bsSize="small" onClick={ this.moveBack.bind(this) }>
-          Back
+          { this.props.labels.BACK }
         </Button>
       );
     }
 
     let buttonRight = null;
-    if (this.state.page < this.state.program.length) {
+    if (this.state.page < this.props.program.length) {
       buttonRight = (
         <Button bsStyle="primary" bsSize="small"
           disabled={ !this.getSelected(this.state.page) }
           onClick={ this.moveNext.bind(this) }>
-          Next
+          { this.props.labels.NEXT }
         </Button>
       );
     } else {
@@ -364,7 +210,7 @@ export default class TicketBuilder extends React.Component {
           <Button bsStyle="primary" bsSize="small"
             disabled={ !this.state.emailisvalid }
             onClick={ this.completeTicket.bind(this) }>
-            Send the discount voucher to
+            { this.props.labels.SEND_TO }
           </Button>
           <FormGroup>
             <FormControl type="text" bsSize="small"
@@ -373,7 +219,7 @@ export default class TicketBuilder extends React.Component {
                 this.email = ref;
               } }
               onChange={ this.selectEmail.bind(this) }
-              placeholder="my email address" />
+              placeholder={ this.props.labels.SEND_TO_HINT } />
           </FormGroup>
           <span>&nbsp;{ this.state.emailvalidation }</span>
         </Form>
@@ -384,10 +230,10 @@ export default class TicketBuilder extends React.Component {
     if ((this.state.page === 0) && (!this.getSelected(0))) {
       buttons = (
         <p style={ {fontStyle: 'italic', fontSize: '90%'} }>
-          Click on one of the three boxes to select the option!
+          { this.props.labels.OPTIONS_HINT }
         </p>
       );
-    } else if (this.state.page < this.state.program.length) {
+    } else if (this.state.page < this.props.program.length) {
       buttons = (
         <Row>
           <Col sm={ 2 }>

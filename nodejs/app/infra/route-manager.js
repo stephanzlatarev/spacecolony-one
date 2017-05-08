@@ -15,7 +15,16 @@ const routeManager = Object.assign({}, baseManager, {
       if (!file || !file.length) {
         file = 'Home';
       }
-      return fs.readFileSync('./app/content/' + file, 'utf8');
+
+      let lang = 'bg';
+      let content = null;
+      try {
+        content = fs.readFileSync('./app/content/' + lang + '/' + file, 'utf8');
+      } catch (e) {
+        content = fs.readFileSync('./app/content/en/' + file, 'utf8');
+      }
+
+      return content;
     };
 
     router.get('/content/*', (req, res) => {
