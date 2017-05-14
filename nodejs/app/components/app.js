@@ -21,3 +21,4 @@ export {default as Mission} from './Mission';
 export {default as NavigationCard} from './NavigationCard';
 export {default as ScienceCard} from './ScienceCard';
 export {default as TicketBuilder} from './TicketBuilder';
+export {default as Voucher} from './Voucher';
