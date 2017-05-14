@@ -41,6 +41,15 @@
     <url-pattern>/Voucher/*</url-pattern>
   </servlet-mapping>
 
+  <servlet>
+    <servlet-name>report</servlet-name>
+    <servlet-class>spacecolony.ReportServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>report</servlet-name>
+    <url-pattern>/report/*</url-pattern>
+  </servlet-mapping>
+
   <filter>
     <filter-name>ObjectifyFilter</filter-name>
     <filter-class>com.googlecode.objectify.ObjectifyFilter</filter-class>
@@ -48,6 +57,7 @@
   <filter-mapping>
     <filter-name>ObjectifyFilter</filter-name>
     <url-pattern>/prospect/*</url-pattern>
+    <url-pattern>/report/*</url-pattern>
   </filter-mapping>
   <listener>
     <listener-class>spacecolony.Initialization</listener-class>

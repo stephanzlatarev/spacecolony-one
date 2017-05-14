@@ -18,6 +18,10 @@ public class ProspectServlet extends HttpServlet {
     InputStreamReader reader = new InputStreamReader(request.getInputStream());
     Prospect prospect = new GsonBuilder().create().fromJson(reader, Prospect.class);
     reader.close();
+
+    prospect.country = request.getHeader("X-AppEngine-Country");
+    prospect.timestamp = System.currentTimeMillis();
+
     ObjectifyService.ofy().save().entity(prospect).now();
   }
 

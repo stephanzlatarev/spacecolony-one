@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cronentries>
+  <cron>
+    <url>/report</url>
+    <description>Daily report</description>
+    <schedule>every day 00:00</schedule>
+  </cron>
+</cronentries>
