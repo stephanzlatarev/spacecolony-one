@@ -38,6 +38,7 @@
     <url-pattern>/Blueprints/*</url-pattern>
     <url-pattern>/Science/*</url-pattern>
     <url-pattern>/Experience/*</url-pattern>
+    <url-pattern>/Voucher/*</url-pattern>
   </servlet-mapping>
 
   <filter>
