@@ -103,8 +103,6 @@ export default class TicketBuilder extends React.Component {
       if (window.ga) {
         window.ga('send', 'pageview', '/Experience/Tickets/Sent');
       }
-
-      window.onbeforeunload = null;
     }
 
     return false;
@@ -121,7 +119,7 @@ export default class TicketBuilder extends React.Component {
   }
 
   render() {
-    window.onbeforeunload = this.onBeforeUnload;
+    window.onbeforeunload = !this.state.done ? this.onBeforeUnload : null;
 
     let sectionChoices;
     let sectionTicketSize;
