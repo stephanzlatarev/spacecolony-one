@@ -181,5 +181,11 @@
         ]
       }
     ]
+  },
+  {
+    "type": "NavigationCard",
+    "navigation": "Experience",
+    "title": "What is Space Colony Park?",
+    "text": "If you want to learn more about Space Colony Park before getting your voucher then click here"
   }
 ]

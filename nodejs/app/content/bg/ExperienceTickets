@@ -181,5 +181,11 @@
         ]
       }
     ]
+  },
+  {
+    "type": "NavigationCard",
+    "navigation": "Experience",
+    "title": "Какво е Space Colony Park?",
+    "text": "Ако искаш да разбереш повече за колонията преди да получиш ваучъра си, натисни тук"
   }
 ]
