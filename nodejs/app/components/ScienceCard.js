@@ -12,7 +12,7 @@ export default class ScienceCard extends React.Component {
     let classs = (this.props.navigation) ? 'navigable' : null;
     let click = (this.props.navigation) ? this.onClick.bind(this) : null;
 
-    let imagesrc = (this.props.image.startsWith('http'))
+    let imagesrc = (this.props.image.indexOf('http') === 0)
       ? this.props.image
       : '/assets/pics/' + this.props.image;
     let image;

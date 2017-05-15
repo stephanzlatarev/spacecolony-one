@@ -20,7 +20,7 @@ export default class NavigationCard extends React.Component {
     let disclaimer;
 
     if (this.props.image) {
-      let imagesrc = (this.props.image.startsWith('http'))
+      let imagesrc = (this.props.image.indexOf('http') === 0)
         ? this.props.image
         : '/assets/pics/' + this.props.image;
       image = (

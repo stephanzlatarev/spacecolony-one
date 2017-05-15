@@ -103,12 +103,26 @@ export default class TicketBuilder extends React.Component {
       if (window.ga) {
         window.ga('send', 'pageview', '/Experience/Tickets/Sent');
       }
+
+      window.onbeforeunload = null;
     }
 
     return false;
   }
 
+  onBeforeUnload(event) {
+    let message = 'We are sorry to see you leave!'
+      + ' Would you still help us improve the park by filling out the survey?';
+    let e = event || window.event;
+    if (e) {
+      e.returnValue = message;
+    }
+    return message;
+  }
+
   render() {
+    window.onbeforeunload = this.onBeforeUnload;
+
     let sectionChoices;
     let sectionTicketSize;
 
